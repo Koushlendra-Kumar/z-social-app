@@ -76,15 +76,13 @@ function Tweet({
   reTweets,
 }: Tweet) {
   return (
-    <div className="flex border-b p-4">
-      <div className="mr-3">
+    <div className="flex max-w-full flex-col border-b p-4">
+      <div className="flex gap-2">
         <Avatar
           sx={{ bgcolor: " #3b82f6" }}
           src={user.avatar}
           alt={user.name}
         />
-      </div>
-      <div className="">
         <div className="flex items-center gap-2">
           <span className="text-base font-bold tracking-tight">
             {user.name}
@@ -97,6 +95,8 @@ function Tweet({
             Follow
           </button>
         </div>
+      </div>
+      <div className="mt-3 md:ml-12 md:mt-0">
         <div>
           <p>{post}</p>
           {image && (
@@ -107,7 +107,7 @@ function Tweet({
             />
           )}
         </div>
-        <div className="my-4 flex items-center justify-start gap-16 text-sm text-slate-600">
+        <div className="my-4 flex items-center justify-between text-sm text-slate-600">
           <div className="flex cursor-pointer items-center justify-center gap-1 hover:text-blue-500">
             <ChatBubbleOutline />
             <span>{shares}K</span>
