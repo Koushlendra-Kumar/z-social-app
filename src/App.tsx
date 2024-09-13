@@ -10,12 +10,12 @@ function App() {
   return (
     <div className="flex max-w-full justify-center bg-slate-50 text-slate-900">
       <div
-        className={`${openMenu ? "block" : "hidden"} no-scrollbar viewport-h h-[100svh] min-w-16 overflow-scroll border-r border-gray-300 md:block lg:ml-5 lg:min-w-64`}
+        className={`${openMenu ? "block" : "hidden"} no-scrollbar viewport-h min-w-16 overflow-scroll border-r border-gray-300 md:block lg:ml-5 lg:min-w-64`}
       >
         <SideNav />
       </div>
 
-      <div className="no-scrollbar viewport-h h-[100svh] grow overflow-scroll border-r border-gray-300 lg:max-w-2xl">
+      <div className="no-scrollbar viewport-h grow overflow-scroll border-r border-gray-300 lg:max-w-2xl">
         <Header handleClick={toggleMenu} isMenuOpen={openMenu} />
         <Feed />
       </div>
